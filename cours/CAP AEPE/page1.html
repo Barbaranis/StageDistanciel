@@ -1,0 +1,1275 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sommaire</title>
+<body>
+<div class="gjs-burger-menu-container">
+  <!-- BURGER MENU -->
+  <input type="checkbox" id="gjs-menu-toggle" />
+  <label class="gjs-burger" for="gjs-menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+
+  <!-- SIDEBAR -->
+  <aside class="gjs-sidebar">
+    <h2>Sommaire</h2>
+    <ol>
+      <li>
+        <a href="#gjs-section-1">1 - Le système politique français</a>
+        <ul>
+          <li><a href="#gjs-section-1a">A - Un pouvoir politique unitaire</a></li>
+          <li><a href="#gjs-section-1b">B - Régime parlementaire et présidentiel</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#gjs-section-2">2 - Le cadre administratif français</a>
+        <ul>
+          <li><a href="#gjs-section-2a">A - Un cadre administratif déconcentré</a></li>
+          <li><a href="#gjs-section-2b">B - Un État décentralisé</a></li>
+        </ul>
+      </li>
+    </ol>
+  </aside>
+</div>
+</body>
+
+<style>
+  /* ========= CONTAINER ========= */
+  .gjs-burger-menu-container {
+    position: relative;
+    z-index: 2000;
+  }
+
+
+  /* ========= BURGER BUTTON ========= */
+  .gjs-burger {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+  .gjs-burger span {
+    display: block;
+    height: 4px;
+    background: #003366;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+
+
+  /* ========= SIDEBAR ========= */
+  .gjs-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background: #f4f6f8;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+
+
+  .gjs-sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #003366;
+  }
+
+
+  .gjs-sidebar ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .gjs-sidebar li {
+    margin-bottom: 0.8rem;
+  }
+
+
+  .gjs-sidebar a {
+    text-decoration: none;
+    color: #0055a5;
+    font-weight: 500;
+  }
+
+
+  .gjs-sidebar a:hover {
+    text-decoration: underline;
+    color: #003366;
+  }
+
+
+  /* ========= CHECKBOX HACK ========= */
+  #gjs-menu-toggle {
+    display: none;
+  }
+
+
+  @media (max-width: 768px) {
+    .gjs-burger {
+      display: flex;
+    }
+
+
+    #gjs-menu-toggle:checked ~ .gjs-sidebar {
+      transform: translateX(0);
+    }
+
+
+    /* Animation burger en croix */
+    #gjs-menu-toggle:checked + .gjs-burger span:nth-child(1) {
+      transform: rotate(45deg) translateY(12px);
+    }
+    #gjs-menu-toggle:checked + .gjs-burger span:nth-child(2) {
+      opacity: 0;
+    }
+    #gjs-menu-toggle:checked + .gjs-burger span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-16px);
+    }
+  }
+</style>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le cadre politique et administratif de la France</title>
+  <style>
+    /* ===========================
+       GLOBAL
+    =========================== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+
+
+    /* ===========================
+       TITRE PRINCIPAL
+    =========================== */
+    .main-title-fr-unique {
+      font-size: 2.5rem;
+      color: #3b6ea5;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 2rem;
+    }
+
+
+    /* ===========================
+       VIDÉO
+    =========================== */
+    .video-container-fr-unique {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+
+    .video-container-fr-unique video {
+      width: 80%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+
+    /* ===========================
+       RESPONSIVE DESIGN
+    =========================== */
+    @media (max-width: 768px) {
+      .main-title-fr-unique {
+        font-size: 2rem;
+      }
+
+
+      .video-container-fr-unique video {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1 class="main-title-fr-unique">Le cadre politique et administratif de la France</h1>
+
+
+  <div class="video-container-fr-unique">
+    <video controls>
+      <source src="../image/video.png" type="video/mp4">
+      Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composant</title>
+</head>
+<body>
+  <section id="section-1-unique" class="section-a-unique">
+    <div class="section-header-unique">
+      <div class="section-number-unique">01</div>
+      <div class="section-title-unique">Le système politique Français</div>
+    </div>
+  </section>
+</body>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #333;
+    line-height: 1.6;
+  }
+
+
+  .main-content-unique {
+    margin-left: 270px;
+    padding: 2rem;
+    max-width: 1000px;
+  }
+
+
+  @media (max-width: 900px) {
+    .main-content-unique {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  }
+
+
+  .section-header-unique {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e6f0fb;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3b6ea5e3;
+    margin-bottom: 1.5rem;
+    width: 60%;
+  }
+
+
+  .section-number-unique {
+    background-color: #3b6ea5;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(14px, 2vw, 20px);
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .section-title-unique {
+    color: #3b6ea5;
+    font-size: clamp(12px, 2vw, 20px);
+    font-weight: 600;
+    padding: 6px 16px;
+    margin-left: 15%;
+  }
+</style>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>composant</title>
+  <style>
+    .sub-section-unique h3 {
+      font-size: 1.3rem;
+      color: #0055a5;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="section-1a-unique" class="sub-section-unique">
+    <h3>A. Un pouvoir politique unitaire</h3>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>composant</title>
+  <style>
+    .content-container-fr-001 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+
+    .text-box-fr-001 {
+      flex: 2;
+      background: #f0f7ff;
+      padding: 1.2rem;
+      border-radius: 8px;
+      border: 1px solid #d0e0f0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+
+    .image-box-fr-001 {
+      flex: 1;
+      text-align: center;
+    }
+
+
+    .image-box-fr-001 img {
+      width: 170px;
+      height: auto;
+    }
+
+
+    @media (max-width: 768px) {
+      .content-container-fr-001 {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="section-1a-fr-001" class="sub-section-fr-001">
+    <div class="content-container-fr-001">
+      <div class="text-box-fr-001">
+        <p>
+          Le cadre politique de la France est unitaire : les lois sont les mêmes pour tous.
+          Le système judiciaire est semblable sur tout le territoire.
+          La France est « une République, indivisible, laïque, démocratique et sociale ».
+        </p>
+      </div>
+      <div class="image-box-fr-001">
+        <img src="../../image/imagedrapeau.png" alt="Drapeau français" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>composant</title>
+  <style>
+    /* ======= SECTION POUVOIRS UNIQUES ======= */
+    .powers-section-unique p {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+
+    .powers-list-unique {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+
+    .power-card-unique {
+      width: 180px;
+      height: 100px;
+      perspective: 1000px;
+    }
+
+
+    .card-inner-unique {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+
+    .power-card-unique:hover .card-inner-unique {
+      transform: rotateY(180deg);
+    }
+
+
+    .card-front-unique,
+    .card-back-unique {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+    }
+
+
+    .card-front-unique {
+      background: #f5eec2;
+      color: #333;
+    }
+
+
+    .card-back-unique {
+      background: #003366;
+      color: white;
+      transform: rotateY(180deg);
+      font-size: 0.8rem;
+    }
+
+
+    @media (max-width: 768px) {
+      .powers-list-unique {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="powers-section-unique">
+    <p>Le pouvoir politique est défini par la Constitution, détaillant les trois pouvoirs :</p>
+    <div class="powers-list-unique">
+      <div class="power-card-unique">
+        <div class="card-inner-unique">
+          <div class="card-front-unique">Pouvoir exécutif</div>
+          <div class="card-back-unique">Chargé d'appliquer les lois et de diriger l'administration.</div>
+        </div>
+      </div>
+      <div class="power-card-unique">
+        <div class="card-inner-unique">
+          <div class="card-front-unique">Pouvoir législatif</div>
+          <div class="card-back-unique">Élabore et vote les lois applicables dans tout le pays.</div>
+        </div>
+      </div>
+      <div class="power-card-unique">
+        <div class="card-inner-unique">
+          <div class="card-front-unique">Pouvoir judiciaire</div>
+          <div class="card-back-unique">Interprète les lois et rend la justice en toute indépendance.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Régime parlementaire et présidentiel</title>
+  <style>
+    /* ===========================
+       STYLE GLOBAL
+    ============================ */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+
+    /* ===========================
+       SECTION : REGIME
+    ============================ */
+    .regime-section-unique {
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 10%;
+    }
+
+
+    .regime-title-unique {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #5F8BBC;
+      margin-bottom: 10px;
+    }
+
+
+    .regime-intro-unique {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+
+    /* ===========================
+       CONTENEUR IMAGE + TEXTE
+    ============================ */
+    .regime-container-unique {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+
+    .regime-img-unique {
+      flex: 1;
+      max-width: 250px;
+    }
+
+
+    .regime-img-unique img {
+      width: 100%;
+      height: auto;
+    }
+
+
+    .regime-text-unique {
+      flex: 2;
+      min-width: 300px;
+    }
+
+
+    .regime-highlight-unique {
+      background: #f8f8e8;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      line-height: 1.8;
+      width: 50%;
+    }
+
+
+    /* ===========================
+       TEXTE COMPLÉMENTAIRE
+    ============================ */
+    .regime-details-unique {
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+
+
+    /* ===========================
+       RESPONSIVE
+    ============================ */
+    @media (max-width: 768px) {
+      .regime-container-unique {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+
+      .regime-img-unique {
+        max-width: 200px;
+        margin-bottom: 15px;
+      }
+
+
+      .regime-text-unique {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <section class="regime-section-unique">
+    <!-- TITRE DE LA SECTION -->
+    <h2 class="regime-title-unique">B. Régime parlementaire et présidentiel</h2>
+    <p class="regime-intro-unique">
+      La Vème république organise un régime à la fois présidentiel et parlementaire.
+    </p>
+
+
+    <!-- CONTENEUR PRINCIPAL -->
+    <div class="regime-container-unique">
+      <!-- IMAGE DU PRÉSIDENT -->
+      <div class="regime-img-unique">
+        <img src="../../image/imagePresident.png" alt="Illustration du Président">
+      </div>
+
+
+      <!-- TEXTE DU PRÉSIDENT -->
+      <div class="regime-text-unique">
+        <div class="regime-highlight-unique">
+          <p>
+            <strong>Le président de la République</strong> est chef de l’État et chef des armées et une figure centrale du régime.
+            Il assure, par son arbitrage, « le fonctionnement régulier des pouvoirs publics ».
+            Son autorité s’est progressivement renforcée.
+            Le président de la République est élu pour 5 ans au suffrage universel direct.
+            Il nomme son premier-ministre qui forme le gouvernement avec les ministres et les secrétaires d’État.
+            Le Premier ministre dirige l’action du Gouvernement qui « détermine et conduit la politique de la Nation ».
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TEXTE COMPLÉMENTAIRE -->
+    <p class="regime-details-unique">
+      Le régime politique français est aussi parlementaire. Il y a une séparation des pouvoirs entre l’exécutif et le législatif (ainsi que le judiciaire).
+      <strong>Le pouvoir législatif est composé de deux chambres : l’Assemblée Nationale et le Sénat qui votent les lois.</strong>
+    </p>
+
+
+    <p class="regime-details-unique">
+      L’État décline son organisation unitaire dans un cadre administratif déconcentré et décentralisé.
+    </p>
+  </section>
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le cadre administratif français</title>
+  <style>
+    /* ===========================
+       GLOBAL
+    ============================ */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+
+    /* ===========================
+       SECTION HEADER (Titre principal encadré)
+    ============================ */
+    .admin-header-unique {
+      display: inline-flex;
+      align-items: center;
+      background-color: #e6f0fb;
+      border-radius: 8px;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      flex-wrap: nowrap;
+      border: 2px solid #3b6ea5e3;
+      margin: 2rem;
+    }
+
+
+    .admin-number-unique {
+      background-color: #5F8BBC;
+      color: white;
+      font-weight: bold;
+      font-size: clamp(12px, 3vw, 30px);
+      padding: 6px 14px;
+      border-radius: 5px 0 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+
+    .admin-title-unique {
+      color: #5F8BBC;
+      font-size: clamp(20px, 8vw, 26px);
+      font-weight: 600;
+      padding: 6px 16px;
+      white-space: nowrap;
+      flex-shrink: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+
+    /* ===========================
+       SOUS-TITRE
+    ============================ */
+    .admin-subtitle-unique {
+      color: #5F8BBC;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 1rem 2rem 0.5rem 2rem;
+    }
+
+
+    /* ===========================
+       TEXTE INTRODUCTION ENCADRÉ
+    ============================ */
+    .admin-intro-unique {
+      max-width: 800px;
+      margin: 0 2rem 2rem 2rem;
+      background-color: #f9f9f9;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+    }
+
+
+    .admin-intro-unique p {
+      margin: 0.5rem 0;
+    }
+
+
+    /* ===========================
+       CONTENEUR PRINCIPAL (cartes)
+    ============================ */
+    .admin-container-unique {
+      background-color: #F0ECC8;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem;
+    }
+
+
+    .admin-cards-unique {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+
+    .admin-card-unique {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      background-color: #F0ECC8;
+    }
+
+
+    .admin-card-unique img {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+
+
+    .admin-card-title-unique {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+
+    .admin-card-text-unique {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+
+    /* ===========================
+       RESPONSIVE MOBILE
+    ============================ */
+    @media (max-width: 768px) {
+      .admin-cards-unique {
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      .admin-card-unique {
+        max-width: 90%;
+      }
+
+
+      .admin-header-unique {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+
+
+      .admin-number-unique {
+        border-radius: 8px 8px 0 0;
+        width: 100%;
+        justify-content: center;
+      }
+
+
+      .admin-title-unique {
+        border-radius: 0 0 8px 8px;
+        width: 100%;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- TITRE PRINCIPAL -->
+  <div class="admin-header-unique">
+    <div class="admin-number-unique">02</div>
+    <div class="admin-title-unique">Le cadre administratif français</div>
+  </div>
+
+
+  <!-- SOUS-TITRE -->
+  <h3 class="admin-subtitle-unique">A. Un cadre administratif déconcentré</h3>
+
+
+  <!-- TEXTE D'INTRODUCTION ENCADRÉ -->
+  <div class="admin-intro-unique">
+    <p>La déconcentration est la déclinaison des pouvoirs à un niveau local de l’État.</p>
+    <p>Les agents de l’État qui disposent de ce pouvoir sont à la tête de circonscriptions administratives comme la région, le département et les mairies.</p>
+    <p>Il existe actuellement en France trois niveaux de collectivités territoriales et de circonscriptions d’action de l’État (dont les représentants sont respectivement le maire, le préfet et le préfet de région) :</p>
+  </div>
+
+
+  <!-- CONTENEUR DES CARTES -->
+  <div class="admin-container-unique">
+    <div class="admin-cards-unique">
+      <div class="admin-card-unique">
+        <img src="../../image/imageRegion.png" alt="Carte Région">
+        <div class="admin-card-title-unique">Régions (22)</div>
+        <div class="admin-card-text-unique">
+          Le préfet de région gère les services déconcentrés de l’État dans la région :
+          police nationale, direction régionale de la jeunesse…
+        </div>
+      </div>
+
+
+      <div class="admin-card-unique">
+        <img src="../../image/imageDepartement.png" alt="Carte Département">
+        <div class="admin-card-title-unique">Département (101)</div>
+        <div class="admin-card-text-unique">
+          Le préfet de département est le représentant de l’État.
+          Il dirige les services extérieurs de l’État.
+        </div>
+      </div>
+
+
+      <div class="admin-card-unique">
+        <img src="../../image/imageMairie.png" alt="Carte Mairie">
+        <div class="admin-card-title-unique">Mairies (36 000)</div>
+        <div class="admin-card-text-unique">
+          Le maire, élu par le conseil municipal, est un représentant de l’État dans la commune
+          et le détenteur du pouvoir exécutif local.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organisation territoriale</title>
+  <style>
+    /* ===========================
+       STYLE GLOBAL
+    =========================== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+
+    /* ===========================
+       SOUS-TITRE BLEU
+    =========================== */
+    h2.decentralisation-subtitle {
+      color: #5F8BBC; /* bleu */
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 30px 20px 10px 20px;
+      text-align: left;
+      margin-bottom: 4%;
+    }
+
+
+    .decentralisation-intro-text {
+      max-width: 800px;
+      margin: 0 20px 30px 20px;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+
+    /* ===========================
+       SECTION BANDE BEIGE
+    =========================== */
+    .decentralisation-highlight-section {
+      position: relative;
+      padding: 50px 20px;
+    }
+
+
+    /* Bande beige uniquement pour cette section */
+    .decentralisation-highlight-section::before {
+      content: "";
+      position: absolute;
+      top: 0; /* corrigé */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 25%;
+      height: 100%;
+      background-color: #f5e7c4; /* beige */
+      z-index: -1;
+    }
+
+
+    .decentralisation-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+
+    .decentralisation-content h3 {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+
+    .decentralisation-content p {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- SOUS-TITRE BLEU + TEXTE INTRO -->
+  <h2 class="decentralisation-subtitle">B. Un Etat décentralisé</h2>
+  <p class="decentralisation-intro-text">
+    La décentralisation est différente de la déconcentration car le pouvoir accordé à la collectivité décentralisée est indépendant du pouvoir de l’État. Le pouvoir est alors partagé.
+  </p>
+
+
+  <!-- SECTION BANDE BEIGE -->
+  <section class="decentralisation-highlight-section">
+    <div class="decentralisation-content">
+      <h3>La Commune</h3>
+      <p>La mairie gère l’administration des services communaux : entretien de la voirie, service d’action sociale (CCAS), etc.</p>
+
+
+      <h3>Le Département</h3>
+      <p>Le conseil départemental est indépendant pour la construction et le financement des collèges, la gestion de l’action sociale (Aide sociale à l’enfance, Protection Maternelle et Infantile, aide sociale aux familles, aides aux personnes âgées et handicapées).</p>
+
+
+      <h3>La Région</h3>
+      <p>Le conseil régional coordonne les actions dans le domaine économique, le schéma régional de transport, les lycées, la formation professionnelle, les politiques de formation des travailleurs sociaux et professions paramédicales.</p>
+    </div>
+  </section>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composant A Retenir</title>
+  <style>
+    /* ===========================
+       Composant A RETENIR - Conteneur principal
+    =========================== */
+    .gjs-a-retenir-container {
+      margin-top: 10%;
+      max-width: 800px;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    .gjs-a-retenir-image {
+      max-width: 150px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+
+    .gjs-a-retenir-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+
+    /* ===========================
+       Responsive
+    =========================== */
+    @media (max-width: 600px) {
+      .gjs-a-retenir-container {
+        padding: 10px;
+      }
+      .gjs-a-retenir-image {
+        max-width: 100px;
+      }
+      .gjs-a-retenir-title {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- ===========================
+       Composant A RETENIR
+  =========================== -->
+  <div class="gjs-a-retenir-container">
+    <img src="../image/undraw_book-lover_m9n3 1.png" alt="Lecture" class="gjs-a-retenir-image">
+    <div class="gjs-a-retenir-title">A RETENIR</div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composant Liste des Points</title>
+  <style>
+    /* ===========================
+       Composant 2 : Liste des points
+    =========================== */
+    .gjs-a-retenir-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      text-align: left;
+      max-width: 800px;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      padding: 0 20px;
+    }
+
+
+    .gjs-a-retenir-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+
+    /* Numéro */
+    .gjs-a-retenir-number {
+      background-color: #3b6ea5;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+
+    /* Ligne verticale entre les numéros */
+    .gjs-a-retenir-item:not(:last-child) .gjs-a-retenir-number::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 25px;
+      background-color: #cbd6e2;
+    }
+
+
+    /* Texte */
+    .gjs-a-retenir-content {
+      flex: 1;
+    }
+
+
+    .gjs-a-retenir-content h4 {
+      margin: 0;
+      font-size: 16px;
+      color: #2b5d92;
+    }
+
+
+    .gjs-a-retenir-content p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+
+    /* ===========================
+       Responsive
+    =========================== */
+    @media (max-width: 600px) {
+      .gjs-a-retenir-content h4 {
+        font-size: 14px;
+      }
+      .gjs-a-retenir-content p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===========================
+       Composant 2 : Liste d'éléments
+  =========================== -->
+  <div class="gjs-a-retenir-list">
+
+
+    <!-- Élément 1 -->
+    <div class="gjs-a-retenir-item">
+      <div class="gjs-a-retenir-number">01</div>
+      <div class="gjs-a-retenir-content">
+        <h4>L’État français est composé d’une nation et d’un territoire délimité.</h4>
+        <p>L’État français dispose d’un système politique unitaire qui fonctionne grâce à un régime parlementaire et présidentiel. Ce régime a été défini dans le cadre de la constitution de la Vème République (1958).</p>
+      </div>
+    </div>
+
+
+    <!-- Élément 2 -->
+    <div class="gjs-a-retenir-item">
+      <div class="gjs-a-retenir-number">02</div>
+      <div class="gjs-a-retenir-content">
+        <h4>Le cadre politique de la France est unitaire</h4>
+        <p>Les lois sont les mêmes pour tous. Le système judiciaire est semblable sur tout le territoire. La France est « une République, indivisible, laïque, démocratique et sociale ».</p>
+      </div>
+    </div>
+
+
+    <!-- Élément 3 -->
+    <div class="gjs-a-retenir-item">
+      <div class="gjs-a-retenir-number">03</div>
+      <div class="gjs-a-retenir-content">
+        <h4>Le pouvoir politique est défini par la Constitution</h4>
+        <p>Détaillant les trois pouvoirs : exécutif, législatif et judiciaire.</p>
+      </div>
+    </div>
+
+
+    <!-- Élément 4 -->
+    <div class="gjs-a-retenir-item">
+      <div class="gjs-a-retenir-number">04</div>
+      <div class="gjs-a-retenir-content">
+        <h4>La décentralisation est différente de la déconcentration</h4>
+        <p>Le pouvoir accordé à la collectivité décentralisée est indépendant du pouvoir de l’État. Le pouvoir est alors partagé.</p>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+</html>
+
