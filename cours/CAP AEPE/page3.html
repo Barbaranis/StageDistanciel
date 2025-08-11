@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon module de formation</title>
+  <style>
+    /*  CSS maman  */
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+    }
+   
+
+   
+/* Conteneur principal */
+.module-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  margin-left: 10%;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.189);
+  padding: 30px;
+
+}
+
+/*---============================================================ Contenu principal décalé à droite ============================---*/
+
+/* Page cours*/
+  .contenu-container {
+  margin-left: 15%;
+  padding: 20px;
+  
+
+  padding: 20px;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenu-container {
+	margin-left: 0;
+  width: 100%;
+margin-right: -80%;
+margin-left: 0;
+width: 100%;
+}
+}
+
+
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* =============================================== SOMMAIRE (desktop) ================================================== */
+
+
+
+.sommaire-container {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  width: 160px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  margin-left: 10%;
+  margin-top: 3%;
+  font-size: 100%;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+
+.sommaire-container:hover {
+  opacity: 1;
+}
+
+
+.sommaire-container h3 {
+  color: #3b6ea5;
+  margin-bottom: 15px;
+  font-size: 140%;
+}
+
+
+.sommaire-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.sommaire-container li {
+  margin-bottom: 10px;
+}
+
+
+.sommaire-container a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.2s ease;
+  font-size: 100%;
+}
+
+
+.sommaire-container a:hover {
+  color: #3b6ea5;
+}
+
+
+
+
+/* ===================================================== MENU BURGER (mobile) ======================================================= */
+
+/* Menu toggle (3 traits > croix) */
+.menu-toggle-checkbox {
+  display: none;
+}
+
+
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 2001;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+
+.menu-toggle:hover {
+  opacity: 1;
+}
+
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #333;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+
+
+/* Quand ouvert (transforme en croix) */
+.menu-toggle-checkbox:checked + .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle-checkbox:checked + .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle-checkbox:checked + .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* Slide menu */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  max-width: 300px;
+  height: 100%;
+  background: #f9f9f9;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  padding: 60px 20px;
+  z-index: 1500;
+}
+
+
+.menu-toggle-checkbox:checked + .menu-toggle + .menu {
+  transform: translateX(0);
+}
+
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.menu ul li {
+  margin-bottom: 15px;
+}
+
+
+.menu ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+
+.menu ul li a:hover {
+  color: #3b6ea5;
+}
+
+
+
+
+
+
+        /* ===========================
+       GLOBAL
+    =========================== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+
+
+
+
+
+
+
+
+
+
+ /* ============================== Sous titre ======================================== */
+
+
+ .section-header-unique {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e6f0fb;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3b6ea5e3;
+    margin-bottom: 16%;
+    width: 70%;
+    margin-left: 0%;
+    margin-top: 19%;
+ 
+  }
+
+
+
+
+  .section-number-unique {
+    background-color: #3b6ea5;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(14px, 2vw, 20px);
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   margin-left: -1%;
+   margin-top: -30%;
+   margin-bottom: -30%;
+   padding-top: 59px;
+    padding-right: 18px;
+    padding-bottom: 49px;
+  }
+
+
+  .section-title-unique {
+    color: #3b6ea5;
+    font-size: clamp(12px, 2vw, 20px);
+    font-weight: 600;
+    padding: 6px 16px;
+    margin-left: 10%;
+   
+ 
+  }
+
+
+
+  @media (max-width: 768px) {
+    .section-header-unique {
+     margin-left: 5%;
+     
+      } 
+
+
+      .section-title-unique {
+  
+    padding: 6px 10px;
+    margin-left: 10%;
+    font-size: 80%
+ 
+  }
+
+  }
+    
+  
+  @media (max-width: 768px) {
+    .section-number-unique {
+      font-size: clamp(20px, 1vw, 10px);
+      padding: 20px 2px;
+      margin-left: -2%;
+      margin-top: -10%;
+      margin-bottom: -10%;
+    
+      }
+     
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ========================== SOUSTitre ============================ */
+
+
+    .admin-header-unique {
+      display: inline-flex;
+    align-items: center;
+    background-color: #e6f0fb;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3b6ea5e3;
+    margin-bottom:10%;
+    width: 80%;
+    margin-left: -10%;
+    margin-top: 5%;
+    margin: 0 auto;
+  }
+
+    .admin-number-unique {
+      background-color: #3b6ea5;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(18px, 2vw, 20px);
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    }
+
+
+    .admin-title-unique {
+      color: #3b6ea5;
+    font-size: clamp(12px, 2vw, 20px);
+    font-weight: 600;
+    padding: 6px 16px;
+    margin-left: 10%;
+   
+    }
+
+    @media (max-width: 600px) {
+    .admin-title-unique {
+    font-size: clamp(12px, 2vw, 15px);
+    }
+    .admin-header-unique {
+    width: auto;
+margin-left: 2%;
+margin-top: 20%;}
+
+    .admin-number-unique {
+    background-color: #3b6ea5;
+    font-size: clamp(20px, 2vw, 20px);
+    padding: 9px 16px;
+    display: flex;
+   
+   
+    }
+    .admin-number-unique {
+     
+    padding-top: 28px;
+        padding-right: 16px;
+        padding-bottom: 27px;
+
+   
+    }
+    }
+
+
+
+
+    /* ===========================
+       TITRE PRINCIPAL
+    =========================== */
+    .main-title-fr-unique {
+      font-size: 1.8rem;
+      color: #3b6ea5;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 10%;
+    }
+
+
+    /* ===========================
+       IMAGE
+    =========================== */
+    .image-handicap-fr-unique {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 5%;
+      background-size: 50%;
+    }
+
+
+    .image-handicap-fr-unique img {
+      width: 80%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+
+    /* ===========================
+       RESPONSIVE DESIGN
+    =========================== */
+    @media (max-width: 768px) {
+      .main-title-fr-unique {
+        font-size: 1.5rem;
+        
+      }
+
+
+      .image-handicap-fr-unique img {
+        width: 95%;
+      }
+    }
+
+
+
+
+
+    
+  .main-content-unique {
+    margin-left: 270px;
+    padding: 2rem;
+    max-width: 1000px;
+  }
+
+
+  @media (max-width: 900px) {
+    .main-content-unique {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  }
+
+
+  
+
+
+ 
+
+/* ============================================================= Prise en charge ========================================= */
+/* =================== CONTENEUR BLOC =================== */
+.imageGaucheTexteDroit-container,
+.imageDroiteTextGauche-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #f5f2e9;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 20px;
+}
+
+
+/* =================== IMAGES =================== */
+.imageGaucheTexteDroit-header-image,
+.imageDroiteTextGauche-header-image {
+  flex: 0 0 200px;
+  max-width: 200px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+.imageGaucheTexteDroit-header-image:hover,
+.imageDroiteTextGauche-header-image:hover {
+  transform: scale(1.05);
+}
+
+
+/* =================== BOÎTE DE TEXTE (plus étroite) =================== */
+.scroll-box {
+  flex: 0 0 calc(100% - 240px); /* Laisse de l’espace pour l’image */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-height: 230px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+
+/* =================== TITRE COULEUR =================== */
+.blue-title .scroll-box { color: #1f4ca3; }
+.purple-title .scroll-box { color: #4a2c7f; }
+.orange-title .scroll-box { color: #c05a00; }
+.green-title .scroll-box { color: #2d6f44; }
+
+
+/* =================== TITRE =================== */
+.colored-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+/* =================== TEXTE =================== */
+.scrollable-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+
+/* =================== SCROLL STYLE =================== */
+.scroll-box::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+
+/* =================== FLEX DIRECTION =================== */
+.imageGaucheTexteDroit-container { flex-direction: row; }
+.imageDroiteTextGauche-container { flex-direction: row-reverse; }
+
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+  .imageGaucheTexteDroit-container,
+  .imageDroiteTextGauche-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .imageGaucheTexteDroit-header-image,
+  .imageDroiteTextGauche-header-image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+
+  .scroll-box {
+    width: 100%;
+    max-height: none;
+  }
+}
+
+
+
+/* ============================================================= Loi-text ========================================= */
+
+.loi-texte
+ {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #000;
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 10%;
+}
+
+
+/* Texte en gras */
+.loi-texte
+ strong {
+  font-weight: bold;
+}
+
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .loi-texte
+ {
+    font-size: 16px;
+    padding: 15px 20px;
+    margin: 15px;
+    line-height: 1.6;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .loi-texte
+ {
+    font-size: 15px;
+    padding: 10px 15px;
+    margin: 10px;
+  }
+}
+
+
+
+    
+    /* ================================================================= Quatre actions ============================ */
+    
+    
+
+
+/* SECTION BANDE BEIGE */
+.decentralisation-highlight-section {
+  position: relative;
+  padding: 50px 20px;
+  z-index: 1;
+  text-align: center;
+ 
+}
+
+
+.decentralisation-highlight-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 100%;
+  background-color: #F0ECC8;
+  z-index: -1;
+  border-radius: 8px;
+  
+}
+
+
+/* Titre en haut de la bande beige */
+.highlight-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+
+/* Contenu de la bande beige */
+.decentralisation-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.decentralisation-content strong {
+  font-weight: bold;
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 2px; /* au lieu de 5px ou plus */
+}
+
+
+.decentralisation-content p {
+  font-size: 1rem;
+  margin-bottom: 20px; /* réduit de 30px à 20px */
+  line-height: 1.4; /* peut aussi aider à resserrer */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bloc prévention */
+.prevention-item {
+  margin-bottom: 40px; /* espace entre les blocs */
+}
+
+
+.prevention-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px; /* petit espace collé au texte explicatif */
+}
+
+
+.prevention-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .decentralisation-highlight-section::before {
+    width: 80%;
+  }
+
+
+  .highlight-title {
+    font-size: 1rem;
+  }
+
+
+  .decentralisation-content strong {
+    font-size: 1.1rem;
+  }
+
+
+  .decentralisation-content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/* A retenir*/
+
+  /* =========================== A RETENIR - Conteneur principal =========================== */
+   /* =========================== A RETENIR - Conteneur principal =========================== */
+.gjs-a-retenir-container {
+  margin-top: 10%;
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.gjs-a-retenir-image {
+  max-width: 150px;
+  margin: 0 auto 20px;
+  display: block;
+  margin-top: 10%;
+}
+
+
+.gjs-a-retenir-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+
+/* =========================== Responsive titre =========================== */
+@media (max-width: 600px) {
+  .gjs-a-retenir-container {
+    padding: 10px;
+    margin-top: 20%;
+  }
+  .gjs-a-retenir-image {
+    max-width: 100px;
+  }
+  .gjs-a-retenir-title {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================== Composant a retenir : Liste =========================== */
+.gjs-a-retenir-list {
+  position: relative; /* On peut maintenant placer une ligne verticale */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 20px;
+}
+
+
+/* Ligne verticale pointillée */
+.gjs-a-retenir-list::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 2px;
+  height: calc(80% - 20px);
+  background: repeating-linear-gradient(
+    to bottom,
+    #46494c,
+    #696d72 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  z-index: 0;
+  margin-left: 2%;
+}
+
+
+.gjs-a-retenir-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+}
+
+
+/* Numéro */
+.gjs-a-retenir-number {
+  background-color: #3b6ea5;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Supprimer l'ancienne ligne individuelle */
+.line {
+  display: none;
+}
+
+
+/* Texte */
+.gjs-a-retenir-content {
+  flex: 1;
+  margin-bottom: 2%;
+}
+
+
+.gjs-a-retenir-content h4 {
+  margin: 0;
+  font-size: 1em;
+  color: #2b5d92;
+  margin-bottom: 2%;
+}
+
+
+.gjs-a-retenir-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+
+/* Responsive du texte */
+@media (max-width: 600px) {
+  .gjs-a-retenir-content h4 {
+    font-size: 14px;
+    margin-bottom: 5%;
+  }
+  .gjs-a-retenir-content p {
+    font-size: 13px;
+  }
+  .gjs-a-retenir-content {
+    margin-bottom: 10%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  
+  <div class="module-container">
+    <!--=========================================== Sommaire =================================================-->
+  
+    <!-- ============ MENU BURGER (MOBILE) ============ -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+    <label for="menu-toggle" class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    
+    
+    <nav class="menu">
+      <ul>
+        <li><a href="#section1">1 - Le système politique Français</a></li>
+        <li><a href="#section2">2 - Le cadre administratif français</a></li>
+        <li><a href="#section3">3 - A retenir</a></li>
+      </ul>
+    </nav>
+    
+    
+  
+  <!-- ============ MENU CLASSIQUE (DESKTOP) ============ -->
+  <div class="sommaire-container">
+    <h3>Sommaire</h3>
+    <ul>
+    <li><a href="#section1">1 - La Prise en charge des enfants handicapés</a></li>
+    <li><a href="#section2">2 - La Notion d’inclusion</a></li>
+    <li><a href="#section3">3 - Les actions sanitaires pour prévenir les handicaps</a></li>
+    <li><a href="#section4">4 - A retenir</a></li>
+
+
+
+    </ul>
+  </div>
+  
+  
+    
+    
+    
+    
+    
+    
+  <div class="contenu-container">
+
+
+
+    <div class="module-page">
+   <!--========================================= Titre ==============================================-->
+    <h1 class="main-title-fr-unique">La législation en faveur des personnes handicapées</h1>
+
+
+    <div class="image-handicap-fr-unique">
+        <img src="../imageS/imageHandicap.png" type="image">
+     
+    
+    </div>
+  
+     <!--================================= Sous titre ================================================-->
+
+      <!-- TITRE PRINCIPAL -->
+    
+
+
+
+
+
+      <section id="section1" class="section-a-unique">
+        <div class="section-header-unique">
+          <div class="section-number-unique">01</div>
+          <div class="section-title-unique">
+            <h2>La Prise en charge des enfants handicapés</h2>
+          </div>
+        </div>
+      </section>
+      
+
+ <!--=================================== Prise en charge ==============================================-->
+ 
+
+<!-- ========== Bloc 1 - Législation (bleu) ========== -->
+<div class="imageGaucheTexteDroit-container blue-title">
+  <img src="../imageS/imageDiplome.png" alt="Diplôme" class="imageGaucheTexteDroit-header-image">
+  <div class="scroll-box">
+    <h3 class="colored-title">La législation </h3>
+    <div class="scrollable-text">
+      <p>
+        Les droits des personnes en situation de handicap sont précisés dans la loi de février 2005. Cette loi a défini l'objectif d'accès au droit commun avec le droit à la compensation.
+        L’idée est de favoriser l'accès à l'autonomie des personnes en situation de handicap. La loi donne de nouveaux droits aux parents d’enfants handicapés : comme le droit à l’enfant d’être scolarisé dans l’école la plus proche de son domicile.
+        La loi de février 2005 a instauré la création des Maisons Départementales des Personnes Handicapées (MDPH).
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== Bloc 2 - CDAPH (violet foncé) ========== -->
+<div class="imageDroiteTextGauche-container purple-title">
+  <img src="../imageS/imageBalance.png" alt="Balance" class="imageDroiteTextGauche-header-image">
+  <div class="scroll-box">
+    <h3 class="colored-title">Commission des Droits</h3>
+    <div class="scrollable-text">
+      <p>
+        Dans le cadre de la MDPH, la Commission des Droits et de l’Autonomie des Personnes Handicapées (CDAPH) décide des droits de la personne handicapée. Elle dépend de l’évaluation réalisée par l’équipe pluridisciplinaire et du plan de compensation.
+        La commission précise le taux d’incapacité de la personne, offre la prestation de compensation, accorde la qualité de travailleur handicapé, et formule le projet aidant à l’insertion scolaire.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== Bloc 3 - École maternelle (orange) ========== -->
+<div class="imageGaucheTexteDroit-container orange-title">
+  <img src="../imageS/imageToys.png" alt="Toys" class="imageGaucheTexteDroit-header-image">
+  <div class="scroll-box">
+    <h3 class="colored-title">École maternelle</h3>
+    <div class="scrollable-text">
+      <p>
+        La scolarisation d’un enfant en situation de handicap est un droit. La CDAPH élabore le projet personnalisé de scolarisation dans un plan personnalisé de compensation. Ensuite, l’Éducation Nationale met en œuvre les actions décidées par la MDPH.
+        Un enfant en situation de handicap peut ainsi être scolarisé dès l’âge de trois ans à l’école.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== Bloc 4 - Crèches (vert) ========== -->
+<div class="imageDroiteTextGauche-container green-title">
+  <img src="../imageS/imageMaison.png" alt="Maison" class="imageDroiteTextGauche-header-image">
+  <div class="scroll-box">
+    <h3 class="colored-title">Accueil en crèche </h3>
+    <div class="scrollable-text">
+      <p>
+        Pour améliorer l’accueil des jeunes enfants en situation de handicap dans les crèches, le gouvernement propose un « bonus inclusion handicap » depuis janvier 2019.
+        C’est une aide financière pour les établissements d’accueil du jeune accueillant au moins un enfant bénéficiant de l’Allocation d’Éducation Enfant Handicapé (AEEH).
+        Depuis le 1er janvier 2020, les critères d’attribution concernent un nombre plus important d’établissements.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+  <!--================================= Sous titre ================================================-->
+
+      <!-- TITRE PRINCIPAL -->
+     
+
+
+      <section id="section2" class="section-a-unique">
+        <div class="section-header-unique">
+          <div class="section-number-unique">02</div>
+          <div class="section-title-unique">
+            <h2>La Notion d’inclusion</h2>
+          </div>
+        </div>
+      </section>
+      
+    
+<!--========================================= Loi-texte =========================================-->
+
+
+
+
+<section class="loi-texte">
+    <p>
+      <strong>La loi du 11 février 2005</strong> et la loi pour la refonte de l’Ecole de la République du 8 juillet 2013 
+      ont pour objectif de développer un projet d’école plus inclusive. C’est-à-dire que l’école doit s’adapter aux 
+      besoins spécifiques des enfants. 
+      <strong>L’école doit prévoir des ajustements pour accueillir l’enfant.</strong>
+    </p>
+  </section>
+  
+  
+<!--================================= Sous titre ================================================-->
+
+      <!-- TITRE PRINCIPAL -->
+    
+
+
+
+
+      <section id="section3" class="section-a-unique">
+        <div class="section-header-unique">
+          <div class="section-number-unique">03</div>
+          <div class="section-title-unique">
+            <h2>Les actions sanitaires pour prévenir les handicaps</h2>
+          </div>
+        </div>
+      </section>
+      
+
+        <!--================================ Section Barre Verticale Texte =======================================-->
+
+
+<!-- SECTION BANDE BEIGE -->
+
+<div class="highlight-title">
+    Il existe quatre actions de prévention du handicap
+  </div>
+
+<section class="decentralisation-highlight-section">
+ 
+
+  <div class="decentralisation-content">
+    <div class="prevention-item">
+      <div class="prevention-title">La Vaccination</div>
+      <div class="prevention-text">Antipoliomyélitique</div>
+    </div>
+  
+  
+    <div class="prevention-item">
+      <div class="prevention-title">Le dépistage prénatal</div>
+      <div class="prevention-text">Diagnostic prénatal si la grossesse est à risque, on instaure alors une surveillance médicale.</div>
+    </div>
+  
+  
+    <div class="prevention-item">
+      <div class="prevention-title">La surveillance de l’état de santé du nouveau-né</div>
+      <div class="prevention-text">Dépistage de la phénylcétonurie, de la drépanocytose.</div>
+    </div>
+  
+  
+    <div class="prevention-item">
+      <div class="prevention-title">Une surveillance médicale du nourrisson et du jeune enfant</div>
+    </div>
+  </div>
+  
+</section>
+
+
+
+
+
+
+     <!--======================================= A RETENIR ===========================================-->
+
+     
+
+     <section id="section4" class="section-a-unique">
+      <div class="gjs-a-retenir-container">
+        <img src="../imageS/aretenir.png" alt="Lecture" class="gjs-a-retenir-image">
+        <div class="gjs-a-retenir-title"><strong>A RETENIR</strong></div>
+      </div>
+      </section>
+      
+     
+    
+    
+    
+    
+      <!-- ======================================= Liste d'éléments =========================================== -->
+    
+    
+      <div class="gjs-a-retenir-list">
+    
+    
+        <!-- Élément 1 -->
+        <div class="gjs-a-retenir-item">
+          <div class="gjs-a-retenir-number">01
+            <div class="line"></div>
+
+          </div>
+          <div class="gjs-a-retenir-content">
+            <h4>La loi est un texte adopté par le Parlement et promulgué par le président de la République.
+            </h4>
+            <p>Elle s'impose à tous dès lors qu'elle est promulguée et publiée au Journal officiel.
+                Elle n'est cependant applicable que dans la mesure où des textes d'application sont adoptés et publiés.
+                </p>
+          </div>
+        </div>
+    
+    
+        <!-- Élément 2 -->
+        <div class="gjs-a-retenir-item">
+          <div class="gjs-a-retenir-number">02
+            <div class="line"></div>
+
+          </div>
+          <div class="gjs-a-retenir-content">
+            <h4>Le règlement englobe l'ensemble des décisions du pouvoir exécutif et des autorités administratives.
+            </h4>
+            <p>Cette notion regroupe différentes sortes de textes qui se situent, les uns par rapport aux autres, dans un ordre hiérarchique. Au premier rang de ces textes figurent les décrets puis les arrêtés réglementaires (exemple: arrêté ministériel, préfectoral, municipal)
+            </p>
+          </div>
+        </div>
+    
+    
+        <!-- Élément 3 -->
+        <div class="gjs-a-retenir-item">
+          <div class="gjs-a-retenir-number">03
+            
+
+          </div>
+          <div class="gjs-a-retenir-content">
+            <h4>La charte est un texte juridique solennel ou une règle fondamentale
+            </h4>
+            <p>censée s'appliquer à tous, ayant pour but de garantir des libertés, des droits ou des devoirs. Il existe plusieurs types de charte.
+
+            </p>
+          </div>
+        </div>
+    
+    
+    
+    </body>
+    </html>
+    
+    
