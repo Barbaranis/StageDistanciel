@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2 – Le rythme de l’enfant (beau)</title>
+  <style>
+    :root{
+      --bg:#f4f6f8;
+      --paper:#ffffff;
+      --text:#1f2937;
+      --muted:#4b5563;
+      --primary:#4a79c9;         /* bleu titre */
+      --accent:#6ca5ff;          /* bleu clair pour dégradé */
+      --ring:#c7d2fe;
+      --border:#e8ecf3;
+      --radius:22px;
+      --shadow:0 16px 40px rgba(17,24,39,.08);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", "Noto Sans", sans-serif;
+      background:linear-gradient(180deg,#eef2ff 0%, #f7f8fb 40%, #f4f6f8 100%);
+      color:var(--text);
+      line-height:1.75;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    /* ====== Feuille élégante ====== */
+    .sheet{
+      max-width:var(--maxw);
+      margin:clamp(18px,3.8vw,56px) auto;
+      background:var(--paper);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:clamp(18px,3.2vw,44px);
+      overflow:hidden;
+      position:relative;
+      isolation:isolate;
+    }
+    /* ruban léger en haut */
+    .sheet::before{
+      content:"";
+      position:absolute; inset:0 0 auto 0; height:10px;
+      background:linear-gradient(90deg, var(--primary), var(--accent));
+      opacity:.15;
+    }
+
+    /* ====== Header stylé ====== */
+    .header{
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:16px;
+      margin-bottom: clamp(14px,2.4vw,24px);
+    }
+    .badge{
+      width:64px; height:64px; border-radius:50%;
+      display:grid; place-items:center;
+      font-weight:800; font-size:1.15rem; letter-spacing:.5px;
+      color:#fff;
+      background:conic-gradient(from 180deg at 50% 50%, var(--primary), var(--accent));
+      box-shadow:0 8px 22px rgba(76,102,181,.35);
+    }
+    .title{
+      margin:0;
+      color:var(--primary);
+      font-weight:900;
+      font-size:clamp(1.35rem,1.05rem + 1.6vw,2rem);
+      letter-spacing:.2px;
+      line-height:1.2;
+      text-wrap:balance;
+      position:relative;
+      padding-bottom:6px;
+    }
+    .title::after{
+      content:"";
+      position:absolute; left:0; right:24%;
+      bottom:0; height:6px; border-radius:6px;
+      background:linear-gradient(90deg,var(--primary),var(--accent));
+      opacity:.25;
+    }
+    .icon{
+      width:48px; height:48px; color:var(--primary);
+      opacity:.85;
+    }
+
+    /* ====== Mise en page : colonnes fluides ====== */
+    .grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: clamp(16px, 3vw, 32px);
+    }
+    @media (max-width: 880px){
+      .header{ grid-template-columns:auto 1fr; }
+      .icon{ display:none; }
+      .grid{ grid-template-columns:1fr; }
+    }
+
+    /* ====== Texte ====== */
+    .lead, .para{
+      margin:0;
+      font-size: clamp(1.02rem, .98rem + .35vw, 1.12rem);
+      text-align:justify;
+      hyphens:auto;
+    }
+    .lead{ color:var(--text); }
+    .para{ color:var(--text); }
+
+    /* petite mise en valeur douce */
+    .chip{
+      display:inline-block;
+      padding:.08rem .45rem;
+      border-radius:999px;
+      background: #f1f5ff;
+      border:1px solid #e4ebff;
+      color:#3657a1;
+      font-weight:600;
+      font-size:.95em;
+      vertical-align:baseline;
+      white-space:nowrap;
+    }
+
+    /* encart info */
+    .note{
+      margin-top: clamp(12px,2vw,18px);
+      background: #f7f9ff;
+      border:1px solid var(--border);
+      border-left:5px solid var(--primary);
+      border-radius:14px;
+      padding:12px 14px;
+      color:var(--muted);
+      font-size:clamp(.98rem,.95rem + .25vw,1.06rem);
+    }
+
+    /* Focus accessible si on tabule dans la feuille */
+    .sheet:focus-within{ outline:3px solid var(--ring); outline-offset:2px; }
+
+    @media (prefers-reduced-motion: reduce){
+      *{transition:none !important; animation:none !important}
+    }
+  </style>
+</head>
+<body>
+
+  <section class="sheet" id="rythme-enfant" aria-labelledby="t-rythme">
+    <!-- En-tête -->
+    <header class="header">
+      <div class="badge" aria-hidden="true">02</div>
+      <h2 class="title" id="t-rythme">Le rythme de l’enfant</h2>
+      <!-- icône horloge/lune -->
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path fill="currentColor" d="M12 22a10 10 0 0 1-8.66-5.02 1 1 0 0 1 1.17-1.45A8 8 0 0 0 12 20a8 8 0 0 0 6.93-11.66 1 1 0 0 1 1.45-1.17A10 10 0 0 1 12 22Zm1-16v4.6l3.3 3.3 1.4-1.42L15 12.18V6h-2Z"/>
+      </svg>
+    </header>
+
+    <!-- Contenu en 2 colonnes -->
+    <div class="grid">
+      <p class="lead">
+        Le <span class="chip">rythme circadien</span> est un rythme évolutif tout au long de la vie, constitué de
+        périodes de veille et de sommeil. Cette horloge interne varie selon l’individu et l’âge, mais on retrouve
+        le plus souvent des périodes de sommeil similaires.
+      </p>
+
+      <p class="para">
+        Le sommeil contribue au bien-être et à l’équilibre physique et psychique de l’enfant. Les variations
+        inter-individuelles sont nombreuses (durée, qualité…). Cependant, le découpage du cycle du sommeil est commun :
+        une phase d’endormissement, une phase de <strong>sommeil lent</strong> (quatre stades : très léger, léger,
+        profond, très profond) puis une phase de <strong>sommeil paradoxal</strong>.
+      </p>
+
+      <p class="para">
+        Un <span class="chip">cycle</span> dure en moyenne <strong>90&nbsp;minutes</strong>.
+        Il commence par le sommeil léger et se termine par le sommeil profond. Une nuit complète comprend
+        environ <strong>6 cycles</strong>.
+      </p>
+
+      <div class="note" role="note">
+        Astuce pédagogique : tu peux réutiliser cette mise en page (badge + titre souligné + colonnes) pour toutes
+        tes sections, afin d’assurer une identité visuelle cohérente dans GrapesJS.
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
